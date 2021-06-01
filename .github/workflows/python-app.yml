@@ -25,6 +25,6 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f actions/requirements.txt ]; then pip install -r actions/requirements.txt; fi
     - name: Run migrations
-      run: cd smiley && python manage.py migrate
+      run: cd actions && python manage.py migrate
     - name: Run Tests
-      run: cd smiley && python manage.py test
+      run: cd actions && python manage.py test
